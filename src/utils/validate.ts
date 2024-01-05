@@ -7,16 +7,12 @@ type Error = {
 export const validate = (data: User) => {
   const errors: Error = {};
 
-  if (!data.name) {
-    errors["name"] = "O nome é obrigatório";
-  }
-
   if (!data.email) {
-    errors["email"] = "Digite um e-mail válido";
+    errors["email"] = "Enter a valid email";
   }
 
   if (!data.agree) {
-    errors["agree"] = "Você precisa concordar com os termos";
+    errors["agree"] = "You must agree to the terms";
   }
 
   return errors;
